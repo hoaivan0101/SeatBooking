@@ -12,10 +12,10 @@ const Users = new Schema({
     theaterId: String,
     name: String,
     description: String,
-    start: String,
-    end: String,
-    price: Date,
-    seatsAvailable: String,
+    start: Date,
+    end: Date,
+    price: Number,
+    seatsAvailable: Number,
     seats: [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
         , [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
         , [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]

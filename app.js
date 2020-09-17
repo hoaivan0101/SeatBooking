@@ -7,8 +7,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/public',express.static('public'))
 
-
-app.get('/reservation', function (req, res) {
+app.get('/:id/reservation', function (req, res) {
     res.sendfile('index.html')
 })
 
@@ -23,7 +22,6 @@ app.get('/reservation/:id', function (req, res) {
 
 app.post('/reservation/:id', function (req, res) {
     var seat = req.body.seats;
-    console.log(seat);
     models.updateOne({
         _id:req.params.id
     },{seats:seat})
